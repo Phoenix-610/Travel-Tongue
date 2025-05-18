@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Tongue - Generate Cheat Sheet</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Satisfy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+    <div class="theme-toggle">
+        <input type="checkbox" id="dark-mode-toggle">
+        <label for="dark-mode-toggle" class="toggle-label">
+            <div class="toggle-background">
+                <div class="toggle-thumb"></div>
+                <div class="toggle-moon">🌙</div>
+                <div class="toggle-sun">☀️</div>
+            </div>
+        </label>
+    </div>
+
+    <div class="container generator-page">
+       <nav class="navigation">
+    <a href="index.html" class="home-icon" title="Home">
+        <i class="fas fa-home"></i>
+    </a>
+    <a href="index.html" class="home-link">Travel Tongue</a>
+</nav>
+        
+        <div class="form-container">
+            <div class="form-group">
+                <label for="country">COUNTRY</label>
+                <div class="select-wrapper">
+                    <select id="country" required>
+                        <option value="" disabled selected>Select a country</option>
+                        <option value="france">France</option>
+                        <option value="spain">Spain</option>
+                        <option value="italy">Italy</option>
+                        <option value="japan">Japan</option>
+                        <option value="germany">Germany</option>
+                        <option value="china">China</option>
+                        <option value="mexico">Mexico</option>
+                        <option value="brazil">Brazil</option>
+                        <option value="russia">Russia</option>
+                        <option value="thailand">Thailand</option>
+                    </select>
+                    <div class="select-arrow">▼</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="purpose">PURPOSE/ TRAVEL TYPE</label>
+                <div class="select-wrapper">
+                    <select id="purpose" required>
+                        <option value="" disabled selected>Select purpose</option>
+                        <option value="travel">Travel</option>
+                        <option value="business">Business</option>
+                        <option value="student">Student</option>
+                        <option value="medical">Medical</option>
+                        <option value="cultural">Cultural</option>
+                        <option value="emergency">Emergency</option>
+                        <option value="others">Others</option>
+                    </select>
+                    <div class="select-arrow">▼</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="from-language">CONVERT FROM LANGUAGE</label>
+                <div class="select-wrapper">
+                    <select id="from-language" required>
+                        <option value="" disabled selected>Select language</option>
+                        <option value="en">English</option>
+                        <option value="es">Spanish</option>
+                        <option value="fr">French</option>
+                        <option value="de">German</option>
+                        <option value="it">Italian</option>
+                        <option value="ja">Japanese</option>
+                        <option value="zh">Chinese</option>
+                        <option value="ru">Russian</option>
+                        <option value="pt">Portuguese</option>
+                        <option value="th">Thai</option>
+                    </select>
+                    <div class="select-arrow">▼</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="to-language">CONVERT TO LANGUAGE</label>
+                <div class="select-wrapper">
+                    <select id="to-language" required>
+                        <option value="" disabled selected>Select language</option>
+                        <option value="en">English</option>
+                        <option value="es">Spanish</option>
+                        <option value="fr">French</option>
+                        <option value="de">German</option>
+                        <option value="it">Italian</option>
+                        <option value="ja">Japanese</option>
+                        <option value="zh">Chinese</option>
+                        <option value="ru">Russian</option>
+                        <option value="pt">Portuguese</option>
+                        <option value="th">Thai</option>
+                    </select>
+                    <div class="select-arrow">▼</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="level">CHEAT SHEET LEVEL</label>
+                <div class="select-wrapper">
+                    <select id="level" required>
+                        <option value="" disabled selected>Select level</option>
+                        <option value="basic">Basic</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                    </select>
+                    <div class="select-arrow">▼</div>
+                </div>
+            </div>
+
+            <div class="buttons-row">
+                <button id="generate-btn" class="btn">Generate</button>
+                <button id="download-btn" class="btn" disabled>Download</button>
+            </div>
+        </div>
+
+        <div id="cheat-sheet-result" class="cheat-sheet-container hidden">
+            <h2>Your Language Cheat Sheet</h2>
+            <div id="cheat-sheet-content" class="cheat-sheet-content">
+                <!-- Generated content goes here -->
+            </div>
+        </div>
+    </div>
+    
+     <div class="developer-credit">Designed & developed by: Tarun</div>
+    <canvas id="sparkle-canvas"></canvas>
+
+    <script src="script.js"></script>
+    <script src="generator.js"></script>
+</body>
+</html>

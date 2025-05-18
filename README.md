@@ -1,9 +1,10 @@
-<<<<<<< HEAD
+
 # Travel Tongue 🌎
 
 Travel Tongue is an interactive web application that helps travelers overcome language barriers by generating custom language cheat sheets and providing live translations with cultural context.
 
 ## Link
+ https://phoenix-610.github.io/Travel-Tongue/
 
 
 ## Features ✨
@@ -98,9 +99,5 @@ Contributions are welcome! Feel free to:
 - Improve translations
 - Enhance cultural notes
 
-
 ## Author ✍️
 Designed & developed by: Tarun
-=======
-
->>>>>>> 69ba467fc652a191f9007167a7fe8cfd866664ef
